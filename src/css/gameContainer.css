@@ -1,0 +1,19 @@
+.game-holder {
+  width: 150px;
+  margin-bottom: 30px;
+  border-bottom: solid 1px #000;
+  min-height: 363px;
+  cursor: pointer;
+}
+
+.game-image {
+  min-height: 250px;
+}
+
+.brief-rating {
+  font-size: 9px;
+}
+
+.brief-des {
+  margin-bottom: 10px;
+}

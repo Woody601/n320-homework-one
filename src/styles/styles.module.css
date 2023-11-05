@@ -1,0 +1,225 @@
+.navHolder {
+  position: fixed;
+  background-color: #000;
+  width: 100vw;
+  min-height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  top: 0;
+  left: 0;
+  -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+}
+
+.logo {
+  height: 30px;
+  width: 100px;
+  margin-left: 10px;
+}
+.logo img {
+  height: 30px;
+  margin: auto;
+}
+
+.bars {
+  display: none;
+  height: 20px;
+  margin-top: 10px;
+  margin-right: 10px;
+  float: right;
+  cursor: pointer;
+}
+
+.bars .bar {
+  display: block;
+  width: 25px;
+  margin: 5px 0;
+  background-color: #fff;
+  height: 3px;
+  border-radius: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.bars.active .bar:nth-child(1) {
+  -webkit-transform: translateY(8px) rotate(-45deg);
+          transform: translateY(8px) rotate(-45deg);
+}
+
+.bars.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.bars.active .bar:nth-child(3) {
+  -webkit-transform: translateY(-8px) rotate(45deg);
+          transform: translateY(-8px) rotate(45deg);
+}
+
+.links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 50px;
+  width: 100vw;
+  overflow: hidden;
+  -webkit-transition: height 0.5s, opacity 0.5s ease-in;
+  transition: height 0.5s, opacity 0.5s ease-in;
+}
+.links a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.bigRedFont {
+  color: #ff0000;
+  font-size: 30px;
+}
+
+.blueFont {
+  color: #0000ff;
+}
+
+.app {
+  padding-top: 25px;
+  max-width: 1000px;
+  width: 85%;
+  margin: auto;
+}
+
+.pagescroll {
+  width: 100%;
+  margin-top: 50px;
+  margin: 50px auto auto;
+  overflow-y: auto;
+  height: calc(100vh - 50px);
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 500px;
+  background-position: center;
+  margin-bottom: 25px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.hero .header {
+  font-size: 32px;
+  text-align: center;
+}
+
+.gameContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.gameTitle {
+  min-height: 64px;
+}
+
+.gameHolder {
+  width: 150px;
+  margin-bottom: 30px;
+  border-bottom: solid 1px #000;
+  min-height: 363px;
+  cursor: pointer;
+}
+
+.gameImage {
+  min-height: 250px;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+}
+
+.briefRating {
+  font-size: 9px;
+  margin-bottom: 10px;
+}
+
+.briefDes {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 960px) {
+  .navHolder {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .bars {
+    display: block;
+  }
+  .logo {
+    margin-top: 10px;
+  }
+  .links {
+    height: 0;
+    opacity: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .links.active {
+    height: 100vh;
+    opacity: 1;
+  }
+  .formContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media screen and (max-width: 369px) {
+  .gameContainer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .gameTitle {
+    min-height: auto;
+  }
+}
